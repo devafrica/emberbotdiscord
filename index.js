@@ -10,10 +10,15 @@ client.on('message', msg => {
     case '/ping':
     msg.reply('Pong!')
     break;
-    case '/help':
-    msg.reply("/help - returns this message\n/p CPA - gets CoinGecko's price of CPA\n/getinfo - Gets current CPA coin info\n/height - Gets current CPA coin height\n/hashrate - Gets current CPA coin hashrate\n/reward - Gets current CPA coin reward\n/supply - Get current CPA coin Supply")
+    case '/emberhelp':
+    msg.reply("/emberhelp - returns this message\n"+
+    "/embergetinfo - Gets current CPA coin info\n"+
+    "/emberheight - Gets current CPA coin height\n"+
+    "/emberhashrate - Gets current CPA coin hashrate\n"+
+    "/emberreward - Gets current CPA coin reward\n"+
+    "/embersupply - Get current CPA coin Supply")
     break;
-    case '/height':
+    case '/emberheight':
     curl.setHeaders([
       'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
     ])
@@ -25,7 +30,7 @@ client.on('message', msg => {
       console.log(e);
     });
     break;
-    case '/getinfo':
+    case '/embergetinfo':
     curl.setHeaders([
       'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
     ])
@@ -59,7 +64,7 @@ client.on('message', msg => {
       console.log(e);
     });
     break;
-    case "/hashrate":
+    case "/emberhashrate":
     curl.setHeaders([
       'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
     ])
@@ -71,7 +76,7 @@ client.on('message', msg => {
       console.log(e);
     });
     break;
-    case "/reward":
+    case "/emberreward":
     curl.setHeaders([
       'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
     ])
@@ -84,7 +89,7 @@ client.on('message', msg => {
     });
     break;
 
-    case "/supply":
+    case "/embersupply":
     curl.setHeaders([
       'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
     ])
