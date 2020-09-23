@@ -22,7 +22,7 @@ client.on('message', msg => {
     curl.setHeaders([
       'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
     ])
-    .get('http://api.cryptopay.org.za/q/height/')
+    .get('https://blocks.cryptopay.org.za/height')
     .then(({statusCode, body, headers}) => {
       msg.reply(body)
     })
@@ -34,7 +34,7 @@ client.on('message', msg => {
     curl.setHeaders([
       'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
     ])
-    .get('http://51.15.120.178:13281/getinfo')
+    .get('https://blocks.cryptopay.org.za/info')
     .then(({statusCode, body, headers}) => {
       var temp = body;
       var formated=JSON.parse(temp);
@@ -80,7 +80,7 @@ client.on('message', msg => {
     curl.setHeaders([
       'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
     ])
-    .get('http://api.cryptopay.org.za/q/reward/')
+    .get('https://blocks.cryptopay.org.za/reward/')
     .then(({statusCode, body, headers}) => {
       msg.reply(body)
     })
@@ -93,7 +93,7 @@ client.on('message', msg => {
     curl.setHeaders([
       'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
     ])
-    .get('http://api.cryptopay.org.za/q/supply/')
+    .get('https://blocks.cryptopay.org.za/supply/')
     .then(({statusCode, body, headers}) => {
       msg.reply(body)
     })
